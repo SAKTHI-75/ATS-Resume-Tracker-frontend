@@ -1,0 +1,251 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background: #F4F5F7;
+  color: #111827;
+}
+
+/* ── Shell layout ─────────────────────────────────────── */
+.shell {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ── Sidebar ──────────────────────────────────────────── */
+.sidebar {
+  width: 220px;
+  flex-shrink: 0;
+  background: #fff;
+  border-right: 1px solid #E5E7EB;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.sidebar-logo {
+  padding: 0 20px 16px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #111827;
+  border-bottom: 1px solid #E5E7EB;
+  margin-bottom: 8px;
+}
+
+.sidebar-logo span {
+  color: #7F77DD;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 20px;
+  font-size: 14px;
+  color: #6B7280;
+  cursor: pointer;
+  border-left: 2px solid transparent;
+  transition: background 0.15s;
+}
+
+.nav-item:hover {
+  background: #F5F3FF;
+  color: #534AB7;
+}
+
+.nav-item.active {
+  color: #534AB7;
+  font-weight: 500;
+  border-left: 2px solid #7F77DD;
+  background: #F5F3FF;
+}
+
+.nav-icon {
+  font-size: 18px;
+}
+
+/* ── Main area ────────────────────────────────────────── */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Topbar ───────────────────────────────────────────── */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 28px;
+  background: #fff;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.topbar h1 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.notif-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid #E5E7EB;
+  background: #F9FAFB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #AFA9EC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: #26215C;
+}
+
+/* ── Page content ─────────────────────────────────────── */
+.content {
+  flex: 1;
+  padding: 28px;
+  overflow-y: auto;
+}
+
+/* ── Page header ──────────────────────────────────────── */
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.page-header h1 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* ── Shared card ──────────────────────────────────────── */
+.card {
+  background: #fff;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  padding: 20px 24px;
+}
+
+.card-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 16px;
+}
+
+/* ── Shared table ─────────────────────────────────────── */
+.ats-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.ats-table th {
+  text-align: left;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #6B7280;
+  border-bottom: 1px solid #F3F4F6;
+}
+
+.ats-table td {
+  padding: 9px 10px;
+  border-bottom: 1px solid #F9FAFB;
+}
+
+.ats-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ── Shared badges ────────────────────────────────────── */
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.badge.shortlisted  { background: #EDE9FE; color: #5B21B6; }
+.badge.interview    { background: #FEF3C7; color: #92400E; }
+.badge.selected     { background: #DCFCE7; color: #166534; }
+.badge.recommended  { background: #DCFCE7; color: #166534; }
+.badge.pending      { background: #F3F4F6; color: #6B7280; }
+
+/* ── Shared buttons ───────────────────────────────────── */
+.btn {
+  padding: 7px 16px;
+  border-radius: 8px;
+  border: 1px solid #D1D5DB;
+  background: #fff;
+  font-size: 13px;
+  color: #374151;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: inherit;
+}
+
+.btn:hover {
+  background: #F9FAFB;
+}
+
+.btn-primary {
+  padding: 7px 16px;
+  border-radius: 8px;
+  border: 1px solid #534AB7;
+  background: #7F77DD;
+  font-size: 13px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+  font-family: inherit;
+}
+
+.btn-primary:hover {
+  background: #534AB7;
+}
+
+/* ── Initials avatar ──────────────────────────────────── */
+.initials-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 600;
+  flex-shrink: 0;
+}

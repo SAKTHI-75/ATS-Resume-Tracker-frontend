@@ -1,0 +1,52 @@
+.candidates-table-wrap {
+  overflow-x: auto;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid #E5E7EB;
+}
+
+.candidates-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.candidates-table thead tr {
+  background: #F9FAFB;
+}
+
+.candidates-table th {
+  text-align: left;
+  padding: 10px 16px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #6B7280;
+  border-bottom: 1px solid #E5E7EB;
+  white-space: nowrap;
+}
+
+.candidates-table td {
+  padding: 11px 16px;
+  border-bottom: 1px solid #F3F4F6;
+  color: #374151;
+}
+
+.candidates-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.candidates-table tbody tr:hover td {
+  background: #F9FAFB;
+}
+
+.candidate-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-weight: 500;
+}
+
+.score-pill {
+  font-weight: 600;
+  color: #534AB7;
+}

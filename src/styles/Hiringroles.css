@@ -1,0 +1,339 @@
+/* ── Page sub-title ───────────────────────────────────── */
+.page-sub {
+  font-size: 13px;
+  color: #6B7280;
+  margin: 2px 0 0;
+}
+
+/* ── Role list ────────────────────────────────────────── */
+.role-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ── Role card ────────────────────────────────────────── */
+.role-card {
+  background: #fff;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  transition: box-shadow 0.15s, border-color 0.15s;
+}
+
+.role-card:hover {
+  border-color: #C4B5FD;
+  box-shadow: 0 2px 12px rgba(127, 119, 221, 0.1);
+}
+
+/* ── Role info ────────────────────────────────────────── */
+.role-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.role-title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.role-title-row h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.role-status {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.role-status.open   { background: #DCFCE7; color: #166534; }
+.role-status.closed { background: #F3F4F6; color: #6B7280; }
+
+.role-desc {
+  font-size: 13px;
+  color: #6B7280;
+  margin: 0 0 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 480px;
+}
+
+.role-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.role-skill-tag {
+  padding: 2px 9px;
+  background: #EDE9FE;
+  color: #5B21B6;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+/* ── Role meta ────────────────────────────────────────── */
+.role-meta {
+  display: flex;
+  gap: 28px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.role-meta-item .meta-value {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1;
+}
+
+.role-meta-item .meta-label {
+  font-size: 11px;
+  color: #6B7280;
+  margin-top: 3px;
+}
+
+/* ── Role actions ─────────────────────────────────────── */
+.role-actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.btn-danger {
+  padding: 7px 16px;
+  border-radius: 8px;
+  border: 1px solid #FECACA;
+  background: #FEF2F2;
+  font-size: 13px;
+  color: #B91C1C;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s;
+}
+
+.btn-danger:hover {
+  background: #FEE2E2;
+}
+
+/* ── Loading state ────────────────────────────────────── */
+.roles-loading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 48px;
+  justify-content: center;
+  color: #6B7280;
+  font-size: 14px;
+}
+
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #E5E7EB;
+  border-top-color: #7F77DD;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── Empty state ──────────────────────────────────────── */
+.roles-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 72px 20px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+}
+
+.empty-icon-box {
+  font-size: 36px;
+  width: 64px;
+  height: 64px;
+  background: #F3F4F6;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.roles-empty h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 6px;
+}
+
+.roles-empty p {
+  font-size: 13px;
+  color: #9CA3AF;
+  margin: 0 0 20px;
+  max-width: 280px;
+  line-height: 1.5;
+}
+
+/* ── Fetch error ──────────────────────────────────────── */
+.fetch-error {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: #FEF2F2;
+  border: 1px solid #FECACA;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #B91C1C;
+  margin-bottom: 16px;
+}
+
+/* ── Modal overlay ────────────────────────────────────── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  backdrop-filter: blur(2px);
+}
+
+/* ── Modal box ────────────────────────────────────────── */
+.modal {
+  background: #fff;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 520px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  animation: modal-in 0.2s ease;
+}
+
+@keyframes modal-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px 0;
+}
+
+.modal-header h2 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  color: #111827;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #9CA3AF;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 6px;
+  line-height: 1;
+  transition: background 0.15s;
+}
+
+.modal-close:hover {
+  background: #F3F4F6;
+  color: #374151;
+}
+
+/* ── Modal form ───────────────────────────────────────── */
+.modal-form {
+  padding: 20px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.required {
+  color: #EF4444;
+}
+
+.form-input {
+  padding: 9px 12px;
+  border: 1px solid #D1D5DB;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #111827;
+  font-family: inherit;
+  background: #fff;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  outline: none;
+}
+
+.form-input:focus {
+  border-color: #7F77DD;
+  box-shadow: 0 0 0 3px rgba(127, 119, 221, 0.12);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.form-error {
+  padding: 10px 12px;
+  background: #FEF2F2;
+  border: 1px solid #FECACA;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #B91C1C;
+}
+
+/* ── Modal footer ─────────────────────────────────────── */
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 4px;
+  border-top: 1px solid #F3F4F6;
+  margin-top: 4px;
+}
