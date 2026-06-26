@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import StatusBadge from "../components/StatusBadge";
-import "../styles/ResumeScreener.css";
+import "../styles/Resumescreener.css";
 
 const ALLOWED_TYPES = [
   "application/pdf",
