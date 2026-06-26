@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "chart.js": "^4.5.1",
+    "dist": "^0.1.2",
     "framer-motion": "^12.40.0",
     "react": "^18.2.0",
     "react-chartjs-2": "^5.3.1",
