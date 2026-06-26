@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../styles/HiringRoles.css";
+import "../styles/Hiringroles.css";
 
 const API_BASE = "http://localhost:5000/api/jobs";
 
